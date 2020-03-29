@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[Saga]
+(
+	[SagaId] INT NOT NULL IDENTITY,
+	SagaName NVARCHAR(50) NOT NULL,
+
+	CONSTRAINT UK_SagaName UNIQUE (SagaName),
+	CONSTRAINT PK_SagaId PRIMARY KEY ([SagaID])
+)
