@@ -68,7 +68,7 @@
     <Build Include="ScalarFunction\SF_Hash_Password.sql" />
     <Build Include="StoredProcedure\SP_User_Delete.sql" />
     <Build Include="StoredProcedure\SP_User_ReadOne.sql" />
-    <Build Include="View\User_ReadAll.sql" />
+    <Build Include="View\User_All.sql" />
     <Build Include="StoredProcedure\SP_Quote_Add.sql" />
     <Build Include="StoredProcedure\SP_Quote_Delete.sql" />
     <Build Include="StoredProcedure\SP_Quote_ReadOne.sql" />
