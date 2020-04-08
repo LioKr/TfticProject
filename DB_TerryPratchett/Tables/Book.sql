@@ -1,9 +1,9 @@
 ﻿CREATE TABLE [dbo].[Book]
 (
-	[BookId] INT NOT NULL,	
-	Title NVARCHAR(50) Not Null,
+	[BookId] INT NOT NULL IDENTITY,	
+	Title NVARCHAR(50) NOT Null,
 	ReleaseYear INT NOT NULL,
-	IsDiscWorld BIT DEFAULT 1,
+	IsDiscWorld BIT DEFAULT 1 NOT NULL,
 	SagaName NVARCHAR(50),
 	LastEdit DATETIME2,
 	

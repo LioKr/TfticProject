@@ -15,8 +15,23 @@ namespace TfticProject_TerryPratchett.Api.Models.Client
 		public string Race { get; set; }
 		public string Role { get; set; }
 		public string CharacterDescription { get; set; }
-		public DateTime LastEdit { get; set; }
+		public DateTime? LastEdit { get; set; }
 
+		public Character(string firstname, string lastname, string nickname, string race, string role, string characterDescription, DateTime? lastEdit)
+		{
+			Firstname = firstname;
+			Lastname = lastname;
+			Nickname = nickname;
+			Race = race;
+			Role = role;
+			CharacterDescription = characterDescription;
+			LastEdit = lastEdit;
+		}
 
+		public Character(int id, string firstname, string lastname, string nickname, string race, string role, string characterDescription, DateTime? lastEdit)
+		: this(firstname, lastname, nickname, race, role, characterDescription, lastEdit)
+		{
+			CharacterId = id;
+		}
 	}
 }

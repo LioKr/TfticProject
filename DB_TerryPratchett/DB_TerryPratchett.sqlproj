@@ -81,6 +81,11 @@
     <Build Include="StoredProcedure\SP_Character_Update.sql" />
     <Build Include="StoredProcedure\SP_Character_ReadOne.sql" />
     <Build Include="StoredProcedure\SP_Character_Delete.sql" />
+    <Build Include="View\Book_ReadAll.sql" />
+    <Build Include="StoredProcedure\SP_Book_Add.sql" />
+    <Build Include="StoredProcedure\SP_Book_Delete.sql" />
+    <Build Include="StoredProcedure\SP_Book_ReadOne.sql" />
+    <Build Include="StoredProcedure\SP_Book_Update.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Author.sql" />

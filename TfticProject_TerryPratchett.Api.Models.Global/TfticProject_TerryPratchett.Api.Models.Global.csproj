@@ -55,6 +55,9 @@
     <Compile Include="PocoClass\SuggestionForm.cs" />
     <Compile Include="PocoClass\User.cs" />
     <Compile Include="Mappers\DataRecordExtensions.cs" />
+    <Compile Include="Services\BookRepository.cs" />
+    <Compile Include="Services\CharacterRepository.cs" />
+    <Compile Include="Services\QuoteRepository.cs" />
     <Compile Include="Services\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>

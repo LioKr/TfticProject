@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace TfticProject_TerryPratchett.Api.Models.Global
+namespace Api_TfticProject_TerryPratchett.Models
 {
-    public class Character
+    public class CharacterInfo
     {
 		public int CharacterId { get; set; }
 		public string Firstname { get; set; }

@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
-
-namespace TfticProject_TerryPratchett.Api.Models.Global
+namespace Api_TfticProject_TerryPratchett.Models
 {
-    public class Book
+    public class BookInfo
     {
 		public int BookId { get; set; }
 		public string Title { get; set; }

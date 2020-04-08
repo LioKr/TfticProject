@@ -11,7 +11,7 @@ using TfticProject_TerryPratchett.Api.Models.Interfaces;
 
 namespace Api_TfticProject_TerryPratchett.Controllers
 {
-    
+    [RoutePrefix("api")]
     public class UserController : ApiController
     {
         private IUserRepository<C.User> _service;
@@ -35,23 +35,27 @@ namespace Api_TfticProject_TerryPratchett.Controllers
 
         [HttpPost]
         [AcceptVerbs("POST")]
+        [Route("AddUser")]
         public C.User AddUser(UserInfo userInfo)
         {
             return _service.Insert(new C.User(userInfo.Firstname, userInfo.Lastname, userInfo.Email, userInfo.Username, userInfo.Password, userInfo.Role));
         }
 
-        
-        [AcceptVerbs("POST")]
-        public C.User UpdateUser(int userId, UserInfo userInfo)
+        [HttpPut]
+        [AcceptVerbs("PUT")]
+        [Route("UpdateUser/{id}")]
+        public C.User UpdateUser(int id, UserInfo userInfo)
         {
-            return _service.Update(userId, new C.User(userInfo.Firstname, userInfo.Lastname, userInfo.Email, userInfo.Username, userInfo.Password, userInfo.Role));
+            return _service.Update(id, new C.User(userInfo.Firstname, userInfo.Lastname, userInfo.Email, userInfo.Username, userInfo.Password, userInfo.Role));
         }
 
-        
-        [AcceptVerbs("POST")]
+        [HttpDelete]
+        [AcceptVerbs("DELETE")]
+        [Route("DeleteUser/{id}")]
         public void Delete(int id)
         {
             _service.Delete(id);
         }
+
     }
 }

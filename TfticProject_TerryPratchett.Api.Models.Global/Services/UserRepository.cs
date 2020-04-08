@@ -21,7 +21,7 @@ namespace TfticProject_TerryPratchett.Api.Models.Global.Services
 
         public void Delete(int id)
         {
-            Command command = new Command("SP_User_ReadOne", true);
+            Command command = new Command("SP_User_Delete", true);
             command.AddParameter("userId", id);
 
             _dbConnection.ExecuteNonQuery(command);
@@ -49,8 +49,8 @@ namespace TfticProject_TerryPratchett.Api.Models.Global.Services
             command.AddParameter("userName", entity.Username);
             command.AddParameter("password", entity.Password);
             command.AddParameter("role", entity.Role);
-
-            return _dbConnection.ExecuteReader(command, (dr) => dr.ToUser()).FirstOrDefault();
+            entity.UserId = (int)_dbConnection.ExecuteScalar<User>(command);
+            return entity;
         }
 
         public User Update(int userId, User entity)
@@ -64,7 +64,11 @@ namespace TfticProject_TerryPratchett.Api.Models.Global.Services
             command.AddParameter("password", entity.Password);
             command.AddParameter("role", entity.Role);
 
-            return _dbConnection.ExecuteReader(command, (dr) => dr.ToUser()).SingleOrDefault();
+            if(_dbConnection.ExecuteNonQuery(command)>0)
+            {
+                return this.Get(userId);
+            }
+            return entity;
         }
     }
 }
