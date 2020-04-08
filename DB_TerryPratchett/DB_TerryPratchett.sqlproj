@@ -60,6 +60,7 @@
     <Folder Include="StoredProcedure" />
     <Folder Include="ScalarFunction" />
     <Folder Include="View" />
+    <Folder Include="Scripts" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\User.sql" />
@@ -86,6 +87,22 @@
     <Build Include="StoredProcedure\SP_Book_Delete.sql" />
     <Build Include="StoredProcedure\SP_Book_ReadOne.sql" />
     <Build Include="StoredProcedure\SP_Book_Update.sql" />
+    <Build Include="StoredProcedure\SP_Author_Add.sql" />
+    <Build Include="StoredProcedure\SP_Author_Delete.sql" />
+    <Build Include="StoredProcedure\SP_Author_ReadOne.sql" />
+    <Build Include="StoredProcedure\SP_Author_Update.sql" />
+    <Build Include="View\Author_ReadAll.sql" />
+    <Build Include="View\Saga_ReadAll.sql" />
+    <Build Include="View\Person_ReadAll.sql" />
+    <Build Include="StoredProcedure\SP_Saga_Add.sql" />
+    <Build Include="StoredProcedure\SP_Saga_Delete.sql" />
+    <Build Include="StoredProcedure\SP_Saga_Update.sql" />
+    <Build Include="StoredProcedure\SP_Saga_ReadOne.sql" />
+    <Build Include="StoredProcedure\SP_Person_Add.sql" />
+    <Build Include="StoredProcedure\SP_Person_Update.sql" />
+    <Build Include="StoredProcedure\SP_Person_ReadOne.sql" />
+    <Build Include="StoredProcedure\SP_Person_Delete.sql" />
+    <PostDeploy Include="Scripts\SQLQueryFillDB.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Author.sql" />
@@ -99,5 +116,8 @@
     <Build Include="Tables\QuoteFromBook.sql" />
     <Build Include="Tables\Saga.sql" />
     <Build Include="Tables\SuggestionForm.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PreDeploy Include="Scripts\TruncateAllContent.sql" />
   </ItemGroup>
 </Project>

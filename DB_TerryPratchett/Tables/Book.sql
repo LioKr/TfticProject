@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[Book]
 (
-	[BookId] INT NOT NULL IDENTITY,	
+	[BookId] INT NOT NULL,	
 	Title NVARCHAR(50) NOT Null,
 	ReleaseYear INT NOT NULL,
 	IsDiscWorld BIT DEFAULT 1 NOT NULL,

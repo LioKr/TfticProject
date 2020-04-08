@@ -8,4 +8,5 @@
 	@LastEdit DATETIME2
 AS
 	INSERT INTO [dbo].[Character] (Firstname,Lastname,Nickname,Race,[Role],CharacterDescription,LastEdit)
+	OUTPUT Inserted.CharacterId
 	VALUES (@Firstname, @Lastname, @Nickname, @Race, @Role,@CharacterDescription,@LastEdit)

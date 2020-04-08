@@ -62,5 +62,37 @@ namespace TfticProject_TerryPratchett.Api.Models.Global.Mappers
                 LastEdit = (dR["LastEdit"] != DBNull.Value) ? (DateTime?)dR["LastEdit"] : null
             };
         }
+
+        internal static Person ToPerson(this IDataRecord dR)
+        {
+            return new Person()
+            {
+                PersonId = (int)dR["PersonId"],
+                Firstname = dR["Firstname"].ToString(),
+                Lastname = dR["Lastname"].ToString(),
+                Birthdate = (DateTime)dR["Birthdate"],
+                Deathdate = (dR["Deathdate"] != DBNull.Value) ? (DateTime?)dR["Deathdate"] : null
+            };
+        }
+
+        internal static Author ToAuthor(this IDataRecord dR)
+        {
+            return new Author()
+            {
+                AuthorId = (int)dR["AuthorId"],
+                Biography = dR["Biography"].ToString(),
+                Picture = dR["Picture"].ToString(),
+                PersonId = (int)dR["PersonId"]
+            };
+        }
+
+        internal static Saga ToSaga(this IDataRecord dR)
+        {
+            return new Saga()
+            {
+                SagaId = (int)dR["SagaId"],
+                SagaName = dR["SagaName"].ToString()
+            };
+        }
     }
 }

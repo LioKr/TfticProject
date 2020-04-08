@@ -81,5 +81,50 @@ namespace TfticProject_TerryPratchett.Api.Models.Client.Mappers
         {
             return new C.Quote(entity.QuoteId, entity.Content, entity.Quote_Author, entity.Quote_Book, entity.LastEdit);
         }
+
+        internal static G.Person ToGlobal(this C.Person entity)
+        {
+            return new G.Person()
+            {
+                PersonId = entity.PersonId,
+                Firstname = entity.Firstname,
+                Lastname = entity.Lastname,
+                Birthdate = entity.Birthdate,
+                Deathdate = entity.Deathdate
+            };
+        }
+        internal static C.Person ToClient(this G.Person entity)
+        {
+            return new C.Person(entity.PersonId, entity.Firstname, entity.Lastname, entity.Birthdate, entity.Deathdate);
+        }
+
+        internal static G.Author ToGlobal(this C.Author entity)
+        {
+            return new G.Author()
+            {
+                AuthorId = entity.AuthorId,
+                Biography = entity.Biography,
+                Picture = entity.Picture,
+                PersonId = entity.PersonId
+            };
+        }
+        internal static C.Author ToClient(this G.Author entity)
+        {
+            return new C.Author(entity.AuthorId, entity.Biography, entity.Picture, entity.PersonId);
+        }
+
+        internal static G.Saga ToGlobal(this C.Saga entity)
+        {
+            return new G.Saga()
+            {
+                SagaId = entity.SagaId,
+                SagaName = entity.SagaName
+            };
+        }
+        internal static C.Saga ToClient(this G.Saga entity)
+        {
+            return new C.Saga(entity.SagaId, entity.SagaName);
+        }
+
     }
 }

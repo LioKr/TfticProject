@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
 
-namespace TfticProject_TerryPratchett.Api.Models.Global
+namespace Api_TfticProject_TerryPratchett.Models
 {
-    public class Person
+    public class PersonInfo
     {
         public int PersonId { get; set; }
         public string Firstname { get; set; }
