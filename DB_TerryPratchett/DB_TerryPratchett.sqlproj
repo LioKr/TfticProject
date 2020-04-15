@@ -103,6 +103,7 @@
     <Build Include="StoredProcedure\SP_Person_ReadOne.sql" />
     <Build Include="StoredProcedure\SP_Person_Delete.sql" />
     <PostDeploy Include="Scripts\SQLQueryFillDB.sql" />
+    <Build Include="StoredProcedure\SP_User_Login.sql" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Tables\Author.sql" />
