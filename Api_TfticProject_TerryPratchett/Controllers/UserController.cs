@@ -14,7 +14,7 @@ namespace Api_TfticProject_TerryPratchett.Controllers
     [RoutePrefix("api")]
     public class UserController : ApiController
     {
-        private IUserRepository<C.User> _service;
+        private IRepository<C.User,int> _service;
 
         public UserController()
         {

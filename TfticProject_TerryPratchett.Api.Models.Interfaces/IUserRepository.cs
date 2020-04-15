@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace TfticProject_TerryPratchett.Api.Models.Interfaces
 {
-    public interface IUserRepository<TEntity>
+    public interface IUserRepository<TEntity>:IRepository<TEntity, int> where TEntity : class
     {
-        IEnumerable<TEntity> Get();
-        TEntity Get(int id);
-        TEntity Insert(TEntity entity);
-        TEntity Update(int id, TEntity entity);
-        void Delete(int id);
-
+        TEntity Login(TEntity entity);
     }
 }

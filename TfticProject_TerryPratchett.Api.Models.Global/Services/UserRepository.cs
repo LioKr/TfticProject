@@ -9,7 +9,7 @@ using ToolBox;
 
 namespace TfticProject_TerryPratchett.Api.Models.Global.Services
 {
-    public class UserRepository : IUserRepository<User>
+    public class UserRepository : IRepository<User, int>
     {
         private const string ConnectionString = @"Data Source=DESKTOP-12FD2HA\SQLEXPRESS;Initial Catalog=DB_TerryPratchett;Integrated Security=True";
         private Connection _dbConnection;

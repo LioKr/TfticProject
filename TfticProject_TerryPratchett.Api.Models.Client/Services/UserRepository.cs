@@ -10,9 +10,9 @@ using TfticProject_TerryPratchett.Api.Models.Client.Mappers;
 
 namespace TfticProject_TerryPratchett.Api.Models.Client.Services
 {
-    public class UserRepository : IUserRepository<User>
+    public class UserRepository : IRepository<User,int>
     {
-        IUserRepository<G.User> _globalService;
+        IRepository<G.User, int> _globalService;
 
         public UserRepository()
         {

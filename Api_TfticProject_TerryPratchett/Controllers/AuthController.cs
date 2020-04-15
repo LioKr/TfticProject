@@ -27,7 +27,7 @@ namespace Api_TfticProject_TerryPratchett.Controllers
         //{
         //    _connection = new Connection(ConnectionString);
         //}
-        private IUserRepository<C.User> _service;
+        private IRepository<C.User,int> _service;
 
         public AuthController()
         {
@@ -82,6 +82,7 @@ namespace Api_TfticProject_TerryPratchett.Controllers
                         UserId = (int)dr["UserId"],
                         Firstname = dr["Firstname"].ToString(),
                         Lastname = dr["Lastname"].ToString(),
+                        Username = dr[nameof(user.Username)].ToString(),
                         Email = dr["Email"].ToString(),
                         Role = dr["Role"].ToString()
                     }).SingleOrDefault();

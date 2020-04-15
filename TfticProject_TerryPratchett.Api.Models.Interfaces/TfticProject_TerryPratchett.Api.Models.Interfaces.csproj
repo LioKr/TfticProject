@@ -46,6 +46,7 @@
     <Compile Include="ICharacterRepository.cs" />
     <Compile Include="IPersonRepository.cs" />
     <Compile Include="IQuoteRepository.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="ISagaRepository.cs" />
     <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
